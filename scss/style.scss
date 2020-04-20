@@ -1,0 +1,75 @@
+@import 'reset';
+
+// variable
+
+$color-drakgreen:#293B29;
+
+// mixin
+
+@mixin magCen {
+  margin: 0 auto;
+}
+
+@mixin flexCen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+// body
+
+body {
+  background-color: $color-drakgreen;  
+}
+
+.wrap{
+  width: 1280px;
+  height: 800px;
+  @include magCen();
+  @include flexCen();
+}
+
+.time-area{
+  margin-bottom: 20px;
+  color:#fff;
+}
+
+.clock{
+  background-image: url('../img/clock-bg.svg');
+  background-position: center;  
+  opacity: 1;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  .clock-hour{
+    background-image: url('../img/hour-hand.svg');
+    width: 72px;
+    height: 8px;
+    position: absolute;
+    top: 171px;
+    left: 175px;
+    transform: rotate(-90deg);
+    transform-origin: left;
+  }
+  .clock-minute{
+    background-image: url('../img/minute-hand.svg');
+    width: 8px;
+    height: 96px;
+    position: absolute;
+    top: 83px;
+    left: 171px;
+    transform: rotate(0deg);
+    transform-origin: bottom;
+  }
+  .clock-second{
+    background-image: url('../img/second-hand.svg');
+    width: 12px;
+    height: 126px;
+    position: absolute;
+    top: 175px;
+    left: 169px;
+    transform: rotate(180deg);
+    transform-origin: top;
+  }
+}

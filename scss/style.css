@@ -1,0 +1,107 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #293B29;
+}
+
+.wrap {
+  width: 1280px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.time-area {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.clock {
+  background-image: url("../img/clock-bg.svg");
+  background-position: center;
+  opacity: 1;
+  width: 350px;
+  height: 350px;
+  position: relative;
+}
+.clock .clock-hour {
+  background-image: url("../img/hour-hand.svg");
+  width: 72px;
+  height: 8px;
+  position: absolute;
+  top: 171px;
+  left: 175px;
+  transform: rotate(-90deg);
+  transform-origin: left;
+}
+.clock .clock-minute {
+  background-image: url("../img/minute-hand.svg");
+  width: 8px;
+  height: 96px;
+  position: absolute;
+  top: 83px;
+  left: 171px;
+  transform: rotate(0deg);
+  transform-origin: bottom;
+}
+.clock .clock-second {
+  background-image: url("../img/second-hand.svg");
+  width: 12px;
+  height: 126px;
+  position: absolute;
+  top: 175px;
+  left: 169px;
+  transform: rotate(180deg);
+  transform-origin: top;
+}
